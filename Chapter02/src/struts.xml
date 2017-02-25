@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!--指定Struts2处于开发阶段，可以进行调试-->
+    <constant name="struts.devMode" value="true"/>
+
+    <!--Struts2的Action都必须配置在package中，此处使用默认package-->
+    <package name="default" namespace="/" extends="struts-default">
+        <!--定义一个名为user的Action，实现类为com.qst.chapter2.action.UserAction-->
+        <action name="user" class="com.qst.chapter02.action.UserAction">
+            <!--配置execute()方法返回值与视图资源的映射关系-->
+            <result name="success">/result.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+    </package>
+
+
+</struts>
